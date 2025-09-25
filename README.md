@@ -1,0 +1,2 @@
+# FelipeMadson-campus-event-planner-anne-karoline-felipe-madson
+Planejador de Eventos do IFConecta (evento sistêmico do IFB)— uma aplicação em Python baseada em console que permite aos usuários gerenciar eventos ocorrendo no IFB. O sistema que permite adicionar eventos, visualizar eventos futuros, filtrar por categoria ou data, marcar eventos como “participados” e gerar relatórios simples.
