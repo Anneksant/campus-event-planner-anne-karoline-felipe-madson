@@ -1,3 +1,4 @@
+#função construtora de evento
 def evento(id, nome, data, local, categoria, participado):
     return {
         "id": id,
@@ -7,4 +8,14 @@ def evento(id, nome, data, local, categoria, participado):
         "categoria": categoria,
         "participado": participado,
     }
-#função construtora de evento
+
+# lista global para armazenar eventos
+eventos = []
+
+#Cria um novo evento (dicionário) e adiciona à lista `eventos`. Retorna o evento criado.
+
+def criar_evento(id, nome, data, local, categoria, participado):    
+    novo_evento = evento(id, nome, data, local, categoria, participado)
+    eventos.append(novo_evento)
+    return novo_evento
+
