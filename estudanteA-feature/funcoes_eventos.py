@@ -19,3 +19,21 @@ def criar_evento(id, nome, data, local, categoria, participado):
     eventos.append(novo_evento)
     return novo_evento
 
+b = criar_evento(1,"jose","aaaa", "ali", "lá", True)
+print(b)
+
+#Lista os eventos já criados
+eventos_criado = [b]
+
+"""def listar_eventos():
+    for novo_evento in b:
+        print(eventos) """
+        
+def listar_eventos():
+   for evento_item in eventos:
+        print(evento_item)
+    
+ 
+a = listar_eventos()
+print(a)
+
