@@ -37,3 +37,15 @@ def listar_eventos():
 a = listar_eventos()
 print(a)
 
+#Função pra procurar evento por nome
+
+def buscar_nome_evento(nome, substring = False):
+    nome_processado = nome.lower().strip
+    if substring:
+        resultados = list(filter(lambda e: nome_processado in e["nome"].lower(), eventos))
+    else:
+        resultador = list(filter(lambda e: e["nome"].lower() == nome_processado, eventos))
+    return resultados
+
+
+        
