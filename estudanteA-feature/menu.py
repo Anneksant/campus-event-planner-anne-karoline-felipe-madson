@@ -21,3 +21,15 @@ def getEscolhaDoUsuario():
         except ValueError:
             print("Entrada inválida. Por favor, digite um número.")
 
+def filtrarEventosPorCategoria(listaEventos, categoria):
+    """Filtra e exibe eventos por uma categoria específica."""
+    eventos_filtrados = [e for e in listaEventos if e['categoria'].lower() == categoria.lower()]
+    
+    if not eventos_filtrados:
+        print(f"\nNão há eventos na categoria '{categoria}'.")
+        return
+    
+    print(f"\n--- Eventos na Categoria: {categoria} ---")
+    for evento in eventos_filtrados:
+        status = " (Participado)" if evento.get('participado', False) else ""
+        print(f"ID: {evento['id']} | Nome: {evento['nome']} | Data: {evento['data']} | Local: {evento['local']}{status}")
