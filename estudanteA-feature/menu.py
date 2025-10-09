@@ -33,3 +33,20 @@ def filtrarEventosPorCategoria(listaEventos, categoria):
     for evento in eventos_filtrados:
         status = " (Participado)" if evento.get('participado', False) else ""
         print(f"ID: {evento['id']} | Nome: {evento['nome']} | Data: {evento['data']} | Local: {evento['local']}{status}")
+def marcarEventoAtendido(listaEventos, id_evento):
+    """Marca um evento específico como 'participado' com base no ID."""
+    try:
+        id_int = int(id_evento)
+        print("Evento marcado como atendido com sucesso!")
+    except ValueError:
+        print("Erro: O ID deve ser um número inteiro.")
+        return False
+
+    for evento in listaEventos:
+        if evento['id'] == id_int:
+            evento['participado'] = True
+            print(f"Evento '{evento['nome']}' (ID: {id_int}) marcado como **Participado**.")
+            return True
+    
+    print(f"Erro: Evento com ID {id_int} não encontrado.")
+    return False
