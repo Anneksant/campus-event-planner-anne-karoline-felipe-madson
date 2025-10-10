@@ -48,4 +48,13 @@ def buscar_nome_evento(nome, substring = False):
     return resultados
 
 
+#Vai remover o primeiro evento com id == id_evento da lista `eventos`. 
+#Retornando o dicionário do evento removido, ou None.
+
+def deletar_evento(id_evento):
+    for i, evento in enumerate(eventos):
+        if evento.get("id") == id_evento:
+            return eventos.pop(i)
+    return None
+        
         
