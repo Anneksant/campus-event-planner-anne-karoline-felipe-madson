@@ -10,3 +10,10 @@ if _estudanteA not in sys.path:
 
 import funcoes_eventos as funcoes
 
+def display_menu(): 
+    print("\n=== Planejador de Eventos ===") 
+    print("1. Adicionar evento") 
+    print("2. Ver todos os eventos") 
+    print("3. Buscar evento por nome") 
+    print("4. Deletar evento por ID") 
+    print("5. Sair") 
