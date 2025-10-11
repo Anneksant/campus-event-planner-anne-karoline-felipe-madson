@@ -17,3 +17,8 @@ def display_menu():
     print("3. Buscar evento por nome") 
     print("4. Deletar evento por ID") 
     print("5. Sair") 
+def ler_inteiro(prompt):
+    try:
+        return int(input(prompt).strip())
+    except (ValueError, TypeError):
+        return None
